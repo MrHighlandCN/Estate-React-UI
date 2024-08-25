@@ -2,7 +2,7 @@ import "./listpage.scss";
 import { listData } from "../../lib/dummydata";
 import Filter from "../../components/filter/Filter";
 import Card from "../../components/card/Card";
-import Map from "../../components/map/map";
+import Map from "../../components/map/Map";
 
 function Listpage() {
   const data = listData;
