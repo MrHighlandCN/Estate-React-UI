@@ -1,0 +1,144 @@
+@import "../../responsive.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+
+  a {
+    transition: all 0.4s ease;
+    @include sm {
+      display: none;
+    }
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  .left {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 28px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+      }
+
+      span {
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      background-color: transparent;
+    }
+    a {
+      padding: 8px 16px;
+      margin: 20px;
+      @include sm {
+        display: none;
+      }
+    }
+    .register {
+      background-color: #fece51;
+    }
+    .menuIcon {
+      display: none;
+      z-index: 99;
+      @include sm {
+        display: inline;
+      }
+      img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      height: 100vh;
+      background-color: black;
+      width: 50%;
+      color: white;
+      transition: all 0.5s ease;
+      display: none;
+      font-size: 24px;
+      &.active {
+        right: 0;
+        color: white;
+      }
+      @include sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: initial;
+        }
+      }
+    }
+
+    .user {
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .profile {
+        position: relative;
+        padding: 12px 24px;
+        background-color: #fece51;
+        border-radius: 5px;
+        border: none;
+        .notification {
+          position: absolute;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
