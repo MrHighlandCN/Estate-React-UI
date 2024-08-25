@@ -16,8 +16,6 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-        with:
-          node-version: '14'  # Hoặc phiên bản Node.js bạn đang sử dụng
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
